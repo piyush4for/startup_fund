@@ -1,5 +1,18 @@
 pragma solidity ^0.4.17;
 
+contract CampaignFactory {
+    address[] public deployedCampaigns;
+    
+    function createCampaign(uint minimum) public {
+        address newCampaign = address (new Campaign(minimum, msg.sender));
+        deployedCampaigns.push(newCampaign);
+    }
+    
+    function getDeployedCompaign() public view returns (address[]){
+        return deployedCampaigns;
+    }
+}
+
 contract Campaign {
     struct Request {
         string description;
@@ -22,8 +35,9 @@ contract Campaign {
         _;
     }
     
-    function Compaign(uint minimum) public {
-        manager = msg.sender;
+    function Campaign(uint minimum, address creator) public {
+        //used becoz in factory contract it will become secure from becoming user address not factory address
+        manager = creator;
         minimumContribution = minimum;
     }
     
@@ -77,7 +91,3 @@ contract Campaign {
         
     }
 }
-
-
-
-
