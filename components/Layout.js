@@ -18,7 +18,7 @@ export default (props) => {
 
         <Header />
         {props.children}
-        {/* <h1>i m footer</h1> */}
+        <h1>i m footer that say copyright by piyush</h1>
       </Container>
     </div>
   );

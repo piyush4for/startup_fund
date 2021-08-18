@@ -15,6 +15,7 @@ contract CampaignFactory {
 
 contract Campaign {
     struct Request {
+        string imageURL;
         string description;
         uint value;
         address recipient;
@@ -48,12 +49,13 @@ contract Campaign {
         approversCount++;
     }
     
-    function createRequest(string description, uint value, address recipient)
+    function createRequest(string imageURL, string description, uint value, address recipient)
         public restricted {
             //we use memory variable here becoz request[] is in memory we cant make new object in storage
             
             //whenever user use this function it will stored as requests index 1,2.....
             Request memory  newRequest = Request({
+               imageURL: imageURL,
                description: description,
                value: value,
                recipient: recipient,
@@ -89,5 +91,21 @@ contract Campaign {
         request.recipient.transfer(request.value);
         request.complete = true;
         
+    }
+
+    function getSummary() public view returns (
+        uint, uint, uint, uint, address
+    ) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestsCount() public view returns (uint) {
+        return requests.length;
     }
 }

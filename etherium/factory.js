@@ -5,7 +5,7 @@ import { exportDefaultDeclaration } from 'babel-types';
 
 const instance = new web3.eth.Contract(
     JSON.parse(CampaignFactory.interface),
-    '0x2B0a7A5B31CA1D3af842b46A4d1dAd262339eE49'
+    '0x6a31e79948af4E1554d14A9bFcda7fe39043d7bA'
 );
 
 export default instance;

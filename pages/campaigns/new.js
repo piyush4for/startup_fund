@@ -1,48 +1,64 @@
 import React, { Component } from "react";
-import { Form, Button, Input } from "semantic-ui-react";
+import { Form, Button, Input, Message } from "semantic-ui-react";
 import Layout from "../../components/Layout";
-import factory from '../../etherium/factory';
-import web3 from '../../etherium/web3';
+import factory from "../../etherium/factory";
+import web3 from "../../etherium/web3";
+import { Router} from '../../routes';
 
 class CampaignNew extends Component {
-    state = {
-        minimumContribution: ''
-    };
-    //made this state only for input recording
+  state = {
+    minimumContribution: "",
+    errorMessage: "",
+    loading: false
+  };
+  //made this state only for input recording
 
-    onSubmit = async (event) => {
-        event.preventDefault();
+  onSubmit = async (event) => {
+    event.preventDefault();
 
+    this.setState({ loading: true, errorMessage: ''});
+    
+    try {
         const accounts = await web3.eth.getAccounts();
         await factory.methods
-            .createCampaign(this.state.minimumContribution)
-            .send({
-                from: accounts[0]
-            });
-    };
+        .createCampaign(this.state.minimumContribution)
+        .send({
+            from: accounts[0],
+        });
 
-    render() {
-        return (
-            <Layout>
-                <h3>Create a campaiagns</h3>
-
-                <Form onSubmit={this.onSubmit}>
-                    <Form.Field>
-                        <label>Minimum Contribution</label>
-                        <Input 
-                            label="wei" 
-                            labelPosition="right"
-                            value={this.state.minimumContribution}
-                            onChange={event =>
-                                 this.setState({ minimumContribution: event.target.value })}
-                        />
-                    </Form.Field>
-
-                    <Button primary>Create!</Button>
-                </Form>
-            </Layout>
-        )
+        Router.pushRoute('/');
+    } catch (err) {
+        this.setState({ errorMessage: err.message });
     }
+
+    this.setState({ loading: false});
+};
+
+  render() {
+    return (
+      <Layout>
+        <h3>Create a campaiagns</h3>
+
+        {/* !! is a tricck to convert string to boolean */}
+        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+          <Form.Field>
+            <label>Minimum Contribution</label>
+            <Input
+              label="wei"
+              labelPosition="right"
+              value={this.state.minimumContribution}
+              onChange={(event) =>
+                this.setState({ minimumContribution: event.target.value })
+              }
+            />
+          </Form.Field>
+
+          <Message error header="Oops" content={this.state.errorMessage} />
+          <Button loading={ this.state.loading } primary>Create!</Button>
+        </Form>
+      </Layout>
+    );
+  }
 }
 
 export default CampaignNew;
