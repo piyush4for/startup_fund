@@ -1,0 +1,29 @@
+commit dd6d87f65e0c8b953871cc38d5e4939c0a4d9fb3
+Author: Piyush <piyush4for@gmail.com>
+Date:   Thu Aug 19 02:40:54 2021 +0530
+
+    modified contract for getSummary and imageURL
+
+commit 391267bb1eb63d4b384cee6067ce7673072fa2d9
+Author: Piyush <piyush4for@gmail.com>
+Date:   Mon Aug 16 02:33:13 2021 +0530
+
+    addeed minContribution page for authentication
+
+commit 4e3a77215db5019b2ee6c4d2bebf201b64cbdea9
+Author: Piyush <piyush4for@gmail.com>
+Date:   Wed Aug 4 00:38:43 2021 +0530
+
+    backend task completed waiting frontend
+
+commit 7ad3d62550dc9d7c9d9c65f7315c452b32eaf5ad
+Author: Piyush <piyush4for@gmail.com>
+Date:   Sun Aug 1 02:53:22 2021 +0530
+
+    completed two contract merger
+
+commit 2337d391f831e00d675d4103300b9ac2dea63606
+Author: Piyush <piyush4for@gmail.com>
+Date:   Sun Aug 1 02:06:49 2021 +0530
+
+    simple contract without create contract security button
