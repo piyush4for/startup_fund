@@ -42,7 +42,7 @@ If you want to deploy the contract on your own.
 ## Demo Screenshot
 
 ***index page***
-![index](https://user-images.githubusercontent.com/67409557/130391416-98ed5ed6-2a33-46bc-9031-5c3914d2e3c2.png)
+![index](https://user-images.githubusercontent.com/67409557/132615574-4b0771c8-8290-4788-9caf-67e6bfb7a574.png)
 
 ***Campaign Detail***
 ![campaign_show](https://user-images.githubusercontent.com/67409557/130391447-811ddf4a-2fe3-468a-9605-c01944200a5a.png)
