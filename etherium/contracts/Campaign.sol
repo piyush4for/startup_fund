@@ -3,8 +3,8 @@ pragma solidity ^0.4.17;
 contract CampaignFactory {
     address[] public deployedCampaigns;
     
-    function createCampaign(uint minimum) public {
-        address newCampaign = address (new Campaign(minimum, msg.sender));
+    function createCampaign(uint minimum,string name,string description,string image) public {
+        address newCampaign = new Campaign(minimum, msg.sender,name,description,image);
         deployedCampaigns.push(newCampaign);
     }
     
@@ -27,6 +27,9 @@ contract Campaign {
     Request[] public requests;
     address public manager;
     uint public minimumContribution;
+    string public CampaignName;
+    string public CampaignDescription;
+    string public CampaignImage;
     //used map instead array for saving gas
     mapping(address => bool) public approvers;
     uint public approversCount;
@@ -36,10 +39,13 @@ contract Campaign {
         _;
     }
     
-    function Campaign(uint minimum, address creator) public {
+    function Campaign(uint minimum, address creator,string name,string description,string image) public {
         //used becoz in factory contract it will become secure from becoming user address not factory address
         manager = creator;
         minimumContribution = minimum;
+        CampaignName=name;
+        CampaignDescription=description;
+        CampaignImage=image;
     }
     
     function contribute() public payable {
@@ -94,14 +100,17 @@ contract Campaign {
     }
 
     function getSummary() public view returns (
-        uint, uint, uint, uint, address
+        uint, uint, uint, uint, address, string, string, string
     ) {
         return (
             minimumContribution,
             this.balance,
             requests.length,
             approversCount,
-            manager
+            manager,
+            CampaignName,
+            CampaignDescription,
+            CampaignImage
         );
     }
 

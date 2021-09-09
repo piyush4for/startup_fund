@@ -20,7 +20,7 @@ var _Header2 = _interopRequireDefault(_Header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "F:\\course\\blockchain_project\\backup\\startupFund\\components\\Layout.js";
+var _jsxFileName = "F:\\course\\blockchain_project\\upgraded_startupfund\\components\\Layout.js";
 //rather then importing to index.js we export index to layout.js
 
 // put tags in head of html
@@ -53,11 +53,6 @@ exports.default = function (props) {
       fileName: _jsxFileName,
       lineNumber: 19
     }
-  }), props.children, _react2.default.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    }
-  }, "i m footer that say copyright by piyush")));
+  }), props.children));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXExheW91dC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbnRhaW5lciIsIkhlYWQiLCJIZWFkZXIiLCJwcm9wcyIsImNoaWxkcmVuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxBQUFPOzs7O0FBQ1AsQUFBUzs7QUFDVCxBQUFPOzs7O0FBRVAsQUFBTyxBQUFZLEFBRW5COzs7Ozs7O0FBUEE7O0FBSUE7O2tCQUdlLFVBQUEsQUFBQyxPQUFVLEFBQ3hCO3lCQUNFLGNBQUE7O2dCQUFBO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEscUJBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUE7U0FDRSxBQUNNLEFBQ0o7VUFGRixBQUVPOztnQkFGUDtrQkFGSixBQUNFLEFBQ0UsQUFNRjtBQU5FO0FBQ0UsdUJBS0osQUFBQzs7Z0JBQUQ7a0JBUkYsQUFRRSxBQUNDO0FBREQ7QUFBQSxZQVJGLEFBU1MsQUFDUCwwQkFBQSxjQUFBOztnQkFBQTtrQkFBQTtBQUFBO0FBQUEsS0FaTixBQUNFLEFBQ0UsQUFVRSxBQUlQO0FBakJEIiwiZmlsZSI6IkxheW91dC5qcyIsInNvdXJjZVJvb3QiOiJGOi9jb3Vyc2UvYmxvY2tjaGFpbl9wcm9qZWN0L2JhY2t1cC9zdGFydHVwRnVuZCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXExheW91dC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbnRhaW5lciIsIkhlYWQiLCJIZWFkZXIiLCJwcm9wcyIsImNoaWxkcmVuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxBQUFPOzs7O0FBQ1AsQUFBUzs7QUFDVCxBQUFPOzs7O0FBRVAsQUFBTyxBQUFZLEFBRW5COzs7Ozs7O0FBUEE7O0FBSUE7O2tCQUdlLFVBQUEsQUFBQyxPQUFVLEFBQ3hCO3lCQUNFLGNBQUE7O2dCQUFBO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEscUJBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUE7U0FDRSxBQUNNLEFBQ0o7VUFGRixBQUVPOztnQkFGUDtrQkFGSixBQUNFLEFBQ0UsQUFNRjtBQU5FO0FBQ0UsdUJBS0osQUFBQzs7Z0JBQUQ7a0JBUkYsQUFRRSxBQUNDO0FBREQ7QUFBQSxZQVZOLEFBQ0UsQUFDRSxBQVNTLEFBSWQ7QUFoQkQiLCJmaWxlIjoiTGF5b3V0LmpzIiwic291cmNlUm9vdCI6IkY6L2NvdXJzZS9ibG9ja2NoYWluX3Byb2plY3QvdXBncmFkZWRfc3RhcnR1cGZ1bmQifQ==

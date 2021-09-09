@@ -22,6 +22,9 @@ class CampaignShow extends Component {
       requestCount: summary[2],
       approversCount: summary[3],
       manager: summary[4],
+      name: summary[5],
+      description: summary[6],
+      image: summary[7]
     };
   }
 
@@ -32,9 +35,17 @@ class CampaignShow extends Component {
       minimumContribution,
       requestCount,
       approversCount,
+      name,
+      description,
+      image
     } = this.props;
 
     const items = [
+      {
+        header: <img src={image} style={{ width: 100, align:"centre"}} />,
+        meta: name,
+        description: description
+      },
       {
         header: manager,
         meta: "Address of Manager",
