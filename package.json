@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "fs-extra": "^10.0.0",
     "ganache-cli": "^6.12.2",
