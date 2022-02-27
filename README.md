@@ -7,6 +7,10 @@
 * The creator can propose how to use money and how much money is needed as a 'Request'. 
 * He cannot use money without more than 50% approvers in voting.
 
+##Live Site
+
+https://startup-fund-versel-63g47bikj-piyush4for.vercel.app/
+
 ### To Run the Project :
 
 Clone the repository by doing `git clone "https://github.com/piyush4for/startup_fund.git"`
