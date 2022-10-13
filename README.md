@@ -9,7 +9,7 @@
 
 ##Live Site
 
-https://startup-fund-versel-63g47bikj-piyush4for.vercel.app/
+https://https://startup-fund-versel.vercel.app//
 
 ### To Run the Project :
 
