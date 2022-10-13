@@ -12,7 +12,7 @@ if (typeof window !== 'undefined' && typeof window.web3 !=='undefined') {
     //we are on server or user is not running metamask
     const provider = new Web3.providers.HttpProvider(
         //totally fine to share this key
-        'https://rinkeby.infura.io/v3/8eca61ae2a994437b4b6c199d9772b3f'
+        'https://goerli.infura.io/v3/95c328675546447eba581fcb699d407d'
     );
     web3 = new Web3(provider);
 }

@@ -5,7 +5,7 @@ const compiledFactory = require('./build/CampaignFactory.json')
 
 const provider = new HDWalletProvider(
     'come slow super history large defense drift stone one fat escape good', 
-    'https://rinkeby.infura.io/v3/8eca61ae2a994437b4b6c199d9772b3f'
+    'https://goerli.infura.io/v3/25ec7f4bbbdd4fbca296bfe3cf6cd170'
 );
 const web3 = new Web3(provider);
 
