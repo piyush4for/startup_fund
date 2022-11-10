@@ -38,7 +38,7 @@ You will also see any lint errors in the console.
 #### `npm run test`
 
 ### Note :
-The contract is deployed on Rinkeby test network at address '0x6a31e79948af4E1554d14A9bFcda7fe39043d7bA' with the help of infura node api.<br/> 
+The contract is deployed on Goerli test network at address '0x6a31e79948af4E1554d14A9bFcda7fe39043d7bA' with the help of infura node api.<br/> 
 If you want to deploy the contract on your own. 
 * Checkout `deploy.js` file in the `ethereum` directory, do the neccessary changes as suggested over there. 
 * Thereafter run the `deploy.js` file and replace the account address in `factory.js` file in `etherium` directory with value of the same printed on console.
